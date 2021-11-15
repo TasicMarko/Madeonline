@@ -1,0 +1,63 @@
+// Import fonts and fonts variables
+
+// Example
+@font-face {
+    font-family: 'Poppins Medium';
+    src: url('../fonts/Poppins-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+$font-main:'Work Sans';
+
+
+body { 
+	font: {
+		size:$base-size;
+		family: $font-main;
+	}
+	-webkit-text-size-adjust: 100%;  //fix for iOS
+	overflow-x:hidden;    
+}
+
+p {
+    font-size: 16px;
+    letter-spacing: normal;
+    line-height: 1.5;
+    a {
+        &:hover {
+        }
+    }    
+}
+
+ul {
+    margin:0px;
+    padding:0px;
+    list-style-type: none;
+}
+
+small {
+    font-size: 0.875em;
+}
+
+address {
+    padding:0px;
+    margin:0px;
+}
+
+a {
+    @include animate-fade;
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+}
+
+img {
+	height: auto;
+    display: block;
+}

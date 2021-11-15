@@ -1,0 +1,127 @@
+/* Login CSS */
+/* Login CSS */
+body.login div#login form#loginform p.submit input#wp-submit {
+	background: #00b482;
+	box-shadow:none;
+	border:1px solid #00b482;
+	text-shadow: none;
+	text-transform: uppercase;
+	color:#fff;
+	display: block;
+	width: 100%;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	margin-top: 20px;
+    border-radius:9px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.wp-core-ui .button-group.button-large .button, .wp-core-ui .button.button-large {
+	background: #00b482;
+	box-shadow:none;
+	border:1px solid #00b482;
+	text-shadow: none;
+	text-transform: uppercase;
+	color:#fff;
+	display: block;
+	width: 100%;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	margin-top: 20px;
+    border-radius:9px;
+    font-weight: bold;
+    font-size: 16px;    
+}
+
+body.login div#login form#loginform p.submit input#wp-submit:hover {
+	background: #044166;
+	border-color: #044166;
+}
+
+.login #login_error, .login .message {
+	border-left:4px solid #1eab60;
+}
+
+.login #backtoblog a:hover, .login #nav a:hover {
+	color:#00b482;
+}
+
+.login #backtoblog a {
+	font-weight: bold;
+	color:#00b482;
+}
+
+.login #backtoblog a, .login #nav a {
+	font-weight: bold;
+	color:#000;
+}
+
+.login #backtoblog a:hover , .login #nav a:hover {
+	color:#044166;
+}
+
+.wp-core-ui .button-group.button-large .button, .wp-core-ui .button.button-large {
+	background: #00b482;
+	box-shadow:none;
+	border:1px solid #00b482;
+	text-shadow: none;
+	color:#fff;
+}
+
+.wp-core-ui .button-group.button-large .button:hover , .wp-core-ui .button.button-large:hover {
+	background: #044166;
+	border:1px solid #044166;
+}
+
+body.login {
+	background-color: #fff;
+}
+
+#login {
+	padding-top: 3%!important;
+}
+
+.login form .forgetmenot label {
+	position: relative;
+	top:5px;
+	float:none;
+}
+
+#nav {
+	text-align: center;
+}
+
+#backtoblog a {
+	text-align: center;
+	background:none;
+	display: block;
+	margin:0px;
+	padding:15px;
+	color:#044166!important;
+}
+
+a.privacy-policy-link {
+	color:#00b482;
+}
+
+#backtoblog a:hover {
+    color:#000!important;
+}
+
+.login #backtoblog, .login #nav {
+	padding:0px;
+}
+
+.login form {
+	border:1px solid #f0ede9;
+	background: #fbfbfb;
+    border-radius:0px;
+
+}
+
+.login h1 a {
+	margin-bottom: 0px !important;
+}
