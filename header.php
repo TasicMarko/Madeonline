@@ -23,10 +23,77 @@
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin> -->
 
-
 	<?php wp_head(); ?>
 </head>
+<header class="madeonline-header">
+	<!-- Mobile menu sidebar -->
+	<div class="main-menu-sidebar">
+		<nav id="sidebar-menu-wrapper">
+			<div id="menu">    
+				<ul class="nav-links">
+					<?php
+					wp_nav_menu( array(
+						'menu'              => 'Menu-mobile',
+						'theme_location'    => 'Top menu',
+						'depth'             => 2,
+						'container'         => false,
+						'container_class'   => 'collapse navbar-collapse',
+						'container_id'      => false,
+						'menu_class'        => 'nav navbar-nav',
+						'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+						'items_wrap' => '%3$s',
+						'walker'            => new wp_bootstrap_navwalkermobile())
+					);
+					?>  
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<!-- Mobile menu sidebar END -->
 
+	<!-- Desktop menu -->
+	<div class="desktop-menu">
+		<div class="container">
+			<div class="row">
+				<div class="header-wrapper">
+					<div class="logo">
+						<a href="#">
+							<img src="/wp-content/uploads/2022/07/cropped-Made-Online-Main-Logo-1.webp" alt="">
+						</a>
+					</div>
+					<div class="nav-wrapper">
+						<nav class="desktop-navigation">
+							<div class="desk-nav">
+								<ul class="desk-links">
+									<?php
+									wp_nav_menu( array(
+										'menu'              => 'Main menu',
+										'theme_location'    => 'Primary menu',
+										'depth'             => 2,
+										'container'         => false,
+										'container_class'   => 'collapse navbar-collapse',
+										'container_id'      => false,
+										'menu_class'        => 'nav navbar-nav',
+										'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+										'items_wrap' => '%3$s',
+										'walker'            => new wp_bootstrap_navwalkermobile())
+									);
+									?> 
+								</ul>
+							</div>
+						</nav>
+						<div class="contact-div">
+							<div class="contact-wrap">
+								<a href="/contact">Contact</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</header>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 

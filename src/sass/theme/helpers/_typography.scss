@@ -14,7 +14,8 @@ $font-main:'Work Sans';
 
 body { 
 	font: {
-		size:$base-size;
+        // The size:$base-size was making problem with compiling files to theme.css
+		// size:$base-size;
 		family: $font-main;
 	}
 	-webkit-text-size-adjust: 100%;  //fix for iOS
