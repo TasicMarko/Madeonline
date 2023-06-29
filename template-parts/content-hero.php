@@ -21,6 +21,7 @@
                         </p>
                         <div class="hero-cta">
                            <a href="">Let's Start</a>
+                           <span>Testing</span>
                         </div>
                      </div>
                   </div>
