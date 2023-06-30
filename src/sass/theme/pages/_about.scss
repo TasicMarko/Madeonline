@@ -1,0 +1,58 @@
+.about-header{
+    background-image: linear-gradient(180deg, #F36C2A 0%, #FDA24C 100%);
+    min-height: 300px;
+    margin-bottom: 20px;
+
+    .header-caption{
+        width: 100%;
+        height: 100px;
+        // overflow: hidden;
+        h1{
+            color: #FFFFFF;
+            font-family: "Nunito", Sans-serif;
+            font-size: 55px;
+            font-weight: 800;
+            width: 100%;
+            text-align: center;
+            margin-top: 100px;
+        }
+        .wave{
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background-image: linear-gradient(180deg, #F36C2A 0%, #FDA24C 100%);
+        
+           }
+              .wave::after{
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 30px;
+              background-size: 40px;
+            background-image:
+              radial-gradient(circle at 20px -10px , transparent 24px, #fff 26px);
+            }
+    }
+}
+
+#about-main{
+    .about-content{
+        h2{
+            margin-top: .5rem;
+            margin-bottom: 1rem;
+            font-family: inherit;
+            font-size: 2rem;
+            font-weight: 500;
+            line-height: 1.2;
+            color: #888888;
+        }
+        p{
+            font-family: "Nunito", Sans-serif;
+            font-weight: 400;
+            color: #888888;
+
+        }
+    }
+}
