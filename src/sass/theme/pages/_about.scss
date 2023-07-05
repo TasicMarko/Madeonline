@@ -1,13 +1,13 @@
-.about-header{
+.about-header {
     background-image: linear-gradient(180deg, #F36C2A 0%, #FDA24C 100%);
     min-height: 300px;
-    margin-bottom: 20px;
 
-    .header-caption{
+    .header-caption {
         width: 100%;
         height: 100px;
+
         // overflow: hidden;
-        h1{
+        h1 {
             color: #FFFFFF;
             font-family: "Nunito", Sans-serif;
             font-size: 55px;
@@ -16,43 +16,71 @@
             text-align: center;
             margin-top: 100px;
         }
-        .wave{
-            position: relative;
-            width: 100%;
-            height: 400px;
-            background-image: linear-gradient(180deg, #F36C2A 0%, #FDA24C 100%);
-        
-           }
-              .wave::after{
-              content: "";
-              position: absolute;
-              bottom: 0;
-              left: 0;
-              width: 100%;
-              height: 30px;
-              background-size: 40px;
-            background-image:
-              radial-gradient(circle at 20px -10px , transparent 24px, #fff 26px);
-            }
+
+    }
+
+    .bottom {
+        position: relative;
+        bottom: -1px;
+        transform: rotate(180deg);
+
+    }
+
+    .shape svg {
+        display: block;
+        width: calc(100% + 1.3px);
+        position: initial;
+        left: 50%;
+    }
+
+    .shape .shape-fill {
+        fill: #EDEDED;
+        transform-origin: center;
+        transform: rotateY(0deg)
     }
 }
 
-#about-main{
-    .about-content{
-        h2{
+#about-main {
+    background-color: #EDEDED;
+    padding-top: 30px;
+
+
+    .about-content {
+
+        h2 {
             margin-top: .5rem;
             margin-bottom: 1rem;
             font-family: inherit;
-            font-size: 2rem;
+            font-size: 32px;
             font-weight: 500;
             line-height: 1.2;
-            color: #888888;
+            color: #7A7A7A;
         }
-        p{
+
+        h3 {
+            margin-top: .5rem;
+            margin-bottom: 1rem;
+            font-family: inherit;
+            font-size: 28px;
+            font-weight: 500;
+            line-height: 1.2;
+            color: #7A7A7A;
+        }
+
+        p {
             font-family: "Nunito", Sans-serif;
             font-weight: 400;
-            color: #888888;
+            font-size: 16px;
+            margin-top: 0;
+            margin-bottom: 14px;
+            color: #7A7A7A;
 
         }
     }
+
+
+
+
+
+
 }
