@@ -10,15 +10,24 @@
 get_header();
 ?>
 
-<div id="blog-detailed">
+<!-- <div id="blog-detailed">
         <div class="container">
             <div class="row">
-                <div class="col-lg-10">
+                <div class="col-lg-12"> -->
 
                     <div class="blog-detailed--intro">
+                        <div class="container">
                         <div class="row">
-                            <div class="col-md-10">
+                            <div class="col-lg-6 offset-lg-3">
+                                <h1><?php the_title(); ?></h1>
                                 <div class="blog-info">
+                                    <div class="author">
+                                        <?php echo get_avatar( get_the_author_meta( 'ID' ), 60 ); ?>
+                                        <div class="author-content">
+                                            <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a>
+                                        </div>
+                                        <!-- /.author-content -->
+                                    </div>
                                     <span class="date"><?php echo get_the_date( 'F j, Y' ); ?></span>
                                     <span class="cat-link">
                                         Posted in
@@ -30,29 +39,31 @@ get_header();
                                         echo '<a href="'.$cat_link.'">'.$categories[0]->cat_name.'</a>' 
                                         ?> 
                                     </span>
-                                    <div class="author">
-                                        <?php echo get_avatar( get_the_author_meta( 'ID' ), 60 ); ?>
-                                        <div class="author-content">
-                                            <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a>
-                                            <p><?php the_author_description(); ?></p>
-                                        </div>
-                                        <!-- /.author-content -->
-                                    </div>
+                                    
                                 </div>
                                 <!-- /.blog-info -->
-                                <h1><?php the_title(); ?></h1>
+                                
                             </div>
                             <!-- /.col-md-8 -->
                         </div>
                         <!-- /.row -->
+                        </div>
+
+                        <div class="blog-detailed-bottom">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1523 100" preserveAspectRatio="none">
+                                <path class="shape-fill" d="M0,6V0h1000v100L0,6z"></path>
+                            </svg>
+                        </div>
+                        
                     </div>
-                    <!-- /.blog-detailed--intro -->
                                 
 
-                    <div class="blog-detailed--body">    
-
-                        <?php if( have_rows('content_layout_blog') ): ?>
-                            <?php while( have_rows('content_layout_blog') ): the_row(); ?>
+                    <div class="blog-detailed--body">   
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6 offset-lg-3">
+                                <?php if( have_rows('content_layout_blog') ): ?>
+                                <?php while( have_rows('content_layout_blog') ): the_row(); ?>
 
                                 <?php if( get_row_layout() == 'full_width_content' ): ?>
 
@@ -61,36 +72,39 @@ get_header();
                                     </div>
                                     <!-- // content  -->
                                     
-                                    <?php elseif( get_row_layout() == 'full_width_image' ): ?>
-                                    
-                                        <div class="blog-photo">
-                                            <?php
-                                            $imageID = get_sub_field('featured_image');
-                                            $image = wp_get_attachment_image_src( $imageID, 'full-image' );
-                                            $alt_text = get_post_meta($imageID , '_wp_attachment_image_alt', true);
-                                            ?> 
-                                            <div class="parent">
-                                                <img class="img-responsive" alt="<?php echo $alt_text; ?>" src="<?php echo $image[0]; ?>" /> 
-						                        <img class="overlayimage" alt="overlay" src="<?php bloginfo('template_directory'); ?>/img/bg/frame.webp" />
-                                            </div>
-                                            <span class="blog-photo--description"><?php the_sub_field('caption'); ?></span>
+                                <?php elseif( get_row_layout() == 'full_width_image' ): ?>
+                                
+                                    <div class="blog-photo">
+                                        <?php
+                                        $imageID = get_sub_field('featured_image');
+                                        $image = wp_get_attachment_image_src( $imageID, 'full-image' );
+                                        $alt_text = get_post_meta($imageID , '_wp_attachment_image_alt', true);
+                                        ?> 
+                                        <div class="parent">
+                                            <img class="img-responsive" alt="<?php echo $alt_text; ?>" src="<?php echo $image[0]; ?>" /> 
                                         </div>
-                                        <!-- /.blog-photo -->  
+                                        <figcaption class="blog-photo--description"><?php the_sub_field('caption'); ?></figcaption>
+                                    </div>
+                                    <!-- /.blog-photo -->  
 
                                 <?php endif; ?>
                             <?php endwhile; ?>
-                        <?php endif; ?>    
+                        <?php endif; ?>
+                                </div>
+                            </div>
+                        </div> 
+
+                            
 
                     </div>
                     <!-- /.blog-detailed--body -->
 
-                </div>
+                <!-- </div>
             </div>
         
         </div>
-        <!-- // container  -->
 
-    </div>
+    </div> -->
     <!-- /.blog-detailed -->   
 
 <?php
