@@ -27,6 +27,9 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 
 		// Google fonts (Nunito)
 		wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,700;0,800;0,900;1,300;1,400;1,600&display=swap', false );
+
+		// Font Awesome
+		wp_enqueue_style( 'font-awesome', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', false );
 	}
 } // End of if function_exists( 'understrap_scripts' ).
 

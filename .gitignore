@@ -11,3 +11,6 @@ gulpfile.js
 package.json
 package-lock.json
 .DS_Store
+theme.css
+theme.min.css
+theme.min.css.map

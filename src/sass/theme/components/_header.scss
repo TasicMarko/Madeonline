@@ -8,13 +8,24 @@ p {
     color: #2b2b2b;
 }
 
-.madeonline-header .main-menu-sidebar {
-    display: none;
+.madeonline-header {
+    position: sticky;
+    top: 0px;
+    background-color: #fffFFFED;
+    z-index: 9;
+     .main-menu-sidebar {
+        display: none;
+        
+    }
 }
+
 .desktop-menu {
+    z-index: 9;
     height: 100px;
     display: flex;
     align-items: center;
+    background-color: #fffFFFED;
+    position: relative;
     .header-wrapper {
         display: flex;
         align-items: center;
@@ -43,6 +54,7 @@ p {
                         position: absolute;
                         top: 35px;
                         left: 11px;
+                        background-color: #fff;
                         .menu-item {
                             width: 200px;
                             padding: 12px 0;

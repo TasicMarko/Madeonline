@@ -22,6 +22,10 @@ $fields = get_fields();
 <?php require_once(dirname(__FILE__) . '/template-parts/content-why.php'); ?>
 <!-- Why section END -->
 
+<!-- Services section -->
+<?php require_once(dirname(__FILE__) . '/template-parts/content-services.php'); ?>
+<!-- Services section END -->
+
 
 
 
