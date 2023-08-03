@@ -22,7 +22,7 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="footer-logo">
-                                        <img src="/wp-content/uploads/2022/07/cropped-Made-Online-Main-Logo-1.webp" alt="">
+                                        <img src="/wp-content/uploads/2022/07/cropped-Made-Online-Main-Logo-1.webp" alt="Made Online Logo">
                                     </div>
                                     <!-- /.footer-logo -->
                                 </div>
@@ -40,11 +40,11 @@
                                     <div class="info-block">
                                         <p><strong><?php the_field('contact_footer', 'options'); ?></strong></p>
                                         <div class="contact-block">
-                                            <p><i class="fa-solid fa-location-dot"></i><?php the_field('location_one_footer', 'options'); ?></p>
-                                            <p><i class="fa-solid fa-location-dot"></i><?php the_field('location_two_footer', 'options'); ?></p>
+                                            <p><i class="fa fa-map-marker" aria-hidden="true"></i> <?php the_field('location_one_footer', 'options'); ?></p>
+                                            <p><i class="fa fa-map-marker" aria-hidden="true"></i> <?php the_field('location_two_footer', 'options'); ?></p>
 
-                                            <p><a href="tel:<?php the_field('phone_number_footer', 'options'); ?>"><i class="fa-solid fa-phone"></i> <?php the_field('phone_number_footer', 'options'); ?></a></p>
-                                            <p><a href="mailto:<?php the_field('email_address_footer', 'options'); ?>"><i class="fa-solid fa-envelope"></i> <?php the_field('email_address_footer', 'options'); ?></a></p>
+                                            <p><a href="tel:<?php the_field('phone_number_footer', 'options'); ?>"><i class="fa fa-phone" aria-hidden="true"></i> <?php the_field('phone_number_footer', 'options'); ?></a></p>
+                                            <p><a href="mailto:<?php the_field('email_address_footer', 'options'); ?>"><i class="fa fa-envelope-open-o" aria-hidden="true"></i> <?php the_field('email_address_footer', 'options'); ?></a></p>
                                         </div>
                                         <!-- /.contact-block -->
                                     </div>
@@ -72,12 +72,14 @@
 
                                                 <li>
                                                     <a href="<?php the_sub_field('link_to_network'); ?>" target="_blank" aria-label="Follow Us"><?php the_sub_field('icon_code'); ?></a>
+
                                                     
                                                 </li>
                                                 
 
                                                 <?php endwhile; ?>
                                             <?php endif; ?>
+                                        <a href="https://clutch.co/profile/made-online" target="_blank" aria-label="Follow Us"><img src="/wp-content/uploads/2022/07/Clutch-Logo-BairesDev.svg" alt="Made Online Logo"></a>
 
                                         </ul>
                                         <!-- <a href="https://clutch.co/profile/made-online">
