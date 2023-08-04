@@ -23,6 +23,10 @@
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin> -->
 
+
+	<!-- Scroll Magic - jQuery plugin -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+
 	<?php wp_head(); ?>
 </head>
 <header class="madeonline-header">

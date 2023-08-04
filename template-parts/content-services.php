@@ -10,7 +10,7 @@
         </div>
         <div class="row">
             <div class="col-md-6 col-xs-12">
-                <div class="services-phone-wrapper">
+                <div id="phone-wrap" class="services-phone-wrapper">
                     <img src="/wp-content/uploads/2023/07/Web-Development-Image-Bg.webp" alt="phone img">
                 </div>
             </div>

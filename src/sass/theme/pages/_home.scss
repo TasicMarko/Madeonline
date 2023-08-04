@@ -276,7 +276,7 @@
         }
     }
     .why-shape-reverse {
-        z-index: 9;
+        z-index: 5;
         top: 0;
         svg {
             transform: rotate(0deg);
@@ -444,4 +444,116 @@
     }
   }
 }
+
+
+
+///// Choose ///// 
+
+.section {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.vertical-center {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.vertical-center__inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.section--full {
+  text-align: center;
+}
+
+.section--full,
+.section--vertical {
+  min-height: 50vh;
+  position: relative;
+}
+
+.block-list {
+  white-space: nowrap;
+}
+
+.block-list__item {
+  width: 250px;
+  height: 100vh;
+  min-height: 600px;
+  display: inline-block;
+  white-space: normal;
+  padding-right: 20px;
+}
+
+.block-list__item-inner {
+  background: #eee;
+  width: 100%;
+  height: 100%;
+}
+
+.block-list__item:first-child {
+  margin-left: 0;
+}
+
+#third {
+  background: #f5f5f5;
+}
+
+.scrollend {
+  transform: translateX(-1500px);
+}
+
+
+
+
+
+////// Clients ///// 
+
+$speed: 75s;
+
+.marquee__seperator {
+  a {
+    img {
+      width: 200px;
+      height: 100px;
+      object-fit: contain;
+    }
+  }
+}
+.marquee__item {
+  display: flex;
+}
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  
+  &:hover &__item { animation-play-state: paused; }
+  
+  &__seperator { margin: 0 2rem; }
+  
+  &__item {
+    display: inline-block;
+    will-change: transform;
+    animation: marquee $speed linear infinite;
+    display: flex;
+  }
+}
+
+@keyframes marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+
+// Styling
+.marquee {
+  padding: 1rem 0;
+  color: #fff;
+  display: flex;
+}
+
 
