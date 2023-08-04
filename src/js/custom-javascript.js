@@ -337,6 +337,18 @@ jQuery(document).ready(function(){
         jQuery(this).parent(".service-wrapper").nextAll(".service-wrapper").find(".faq-answer-holder").slideUp();
         });
 
+    jQuery(".wrap .question").click(function(){
+      jQuery(this).parent(".wrap").find(".answer").slideToggle();
+      jQuery(this).parent(".wrap").prevAll(".wrap").find(".answer").slideUp();
+      jQuery(this).parent(".wrap").nextAll(".wrap").find(".answer").slideUp();
+      
+      });
+      jQuery('.click').each(function () { 
+    jQuery(this).click(function () {
+      jQuery(this).toggleClass("rotate");
+    });
+  });
+
 
   });
 
