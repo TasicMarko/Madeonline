@@ -43,6 +43,10 @@
 #about-main {
     background-color: #EDEDED;
     padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
 
 
     .about-content {
@@ -75,6 +79,9 @@
             margin-bottom: 14px;
             color: #7A7A7A;
 
+        }
+        b, strong{
+            font-weight: bolder;
         }
     }
 

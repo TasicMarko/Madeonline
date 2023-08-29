@@ -1,0 +1,206 @@
+.services-header {
+    min-height: 400px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+
+
+    .header-caption {
+        width: 100%;
+        height: 100px;
+        h1 {
+            color: #FFFFFF;
+            font-family: "Nunito", Sans-serif;
+            font-size: 55px;
+            font-weight: 800;
+            width: 100%;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+    }
+
+    .bottom {
+        position: relative;
+        bottom: -10px;
+        transform: rotate(180deg);
+
+    }
+
+    .shape svg {
+        display: block;
+        width: calc(100% + 1.3px);
+        position: initial;
+        left: 50%;
+    }
+
+    .shape .shape-fill {
+        fill: #fff;
+        transform-origin: center;
+        transform: rotateY(0deg)
+    }
+}
+
+#services-main {
+    background-color: #fff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+
+    .services-content {
+        padding: 15px;
+
+        h2 {
+            margin-top: .5rem;
+            margin-bottom: 1rem;
+            font-family: inherit;
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 1.2;
+            // color: #7A7A7A;
+        }
+
+        p {
+            font-family: "Nunito", Sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            margin-top: 0;
+            margin-bottom: 14px;
+            // color: #7A7A7A;
+
+        }
+        b, strong{
+            font-weight: bolder;
+        }
+    }
+    .service-box{
+        display: flex;
+        flex-wrap: wrap;
+        
+        
+        .service{
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            &:hover{
+                .service-flip{
+                    transform: rotateY(180deg);
+                }    
+            }
+            .service-info {
+
+                h2 {
+                    margin-top: .5rem;
+                    margin-bottom: 1rem;
+                    font-family: inherit;
+                    font-size: 32px;
+                    font-weight: 500;
+                    line-height: 1.2;
+                    // color: #7A7A7A;
+                }
+        
+                p {
+                    font-family: "Nunito", Sans-serif;
+                    font-weight: 400;
+                    font-size: 16px;
+                    margin-top: 0;
+                    margin-bottom: 14px;
+                    // color: #7A7A7A;
+        
+                }
+            }
+            .service-flip{
+                transition: transform 0.8s;
+                transform-style: preserve-3d;
+                // display: flex;
+                .service-front, .service-back{
+                    // position: absolute;
+                    // width: 100%;
+                    // height: 100%;
+                    -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
+                    
+                    // display: flex;
+                    // justify-content: center;
+                    // align-items: center;
+                    // flex-direction: column;
+                }
+                .service-front{
+                    background-image: linear-gradient(180deg, #F36C2A 0%, #FDA24C 100%);
+                    text-align: center;
+                    height: 300px;
+                    border-radius: 15px;
+                    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.24);
+                    margin: 50px 0;
+                    align-self: flex-end;
+                    z-index: 900;
+                    position: relative;
+                    
+                    
+                    
+                    
+                    
+                    .parent{         
+                        padding: 20px 30px 25px 30px;
+                        &:hover{
+                            display:none;
+                        }
+                        .box-responsive{
+                            max-width: 100px;
+                            text-align: center;
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                    }
+                    h2{
+                        margin-top: .5rem;
+                        margin-bottom: 1rem;
+                        font-family: inherit;
+                        font-size: 32px;
+                        font-weight: 500;
+                        line-height: 1.2;
+                        color: #fff;
+                    }
+                    p{
+                        margin-top: .5rem;
+                        margin-bottom: 1rem;
+                        font-family: inherit;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 1.2;
+                        color: #fff;
+                        padding: 0 20px;
+        
+                    }
+                }
+                .service-back{
+                    background-color: #000;
+                    color: #fff;
+                    height: 300px;
+                    -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
+                    transform: rotateY(180deg);
+                    position: absolute;
+                    z-index: 1000;
+                    top: -350px;
+                    display: none;
+                }
+            }
+            
+            
+
+        }
+
+        
+        
+    }
+
+
+
+
+
+
+}

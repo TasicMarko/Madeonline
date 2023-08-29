@@ -10,3 +10,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // general
+add_image_size('industry-image', 265, 280, TRUE);

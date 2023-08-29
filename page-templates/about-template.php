@@ -28,10 +28,10 @@ get_header();
     </div>
     <!-- /.container -->
     <div class="shape bottom">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-            <path class="shape-fill" d="M421.9,6.5c22.6-2.5,51.5,0.4,75.5,5.3c23.6,4.9,70.9,23.5,100.5,35.7c75.8,32.2,133.7,44.5,192.6,49.7
-            c23.6,2.1,48.7,3.5,103.4-2.5c54.7-6,106.2-25.6,106.2-25.6V0H0v30.3c0,0,72,32.6,158.4,30.5c39.2-0.7,92.8-6.7,134-22.4
-            c21.2-8.1,52.2-18.2,79.7-24.2C399.3,7.9,411.6,7.5,421.9,6.5z"></path>
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 1000 100" style="enable-background:new 0 0 1000 100;" xml:space="preserve">
+            <path class="shape-fill" d="M0,0l1000,0l0,33.5c-41.3-5-83.4-11.3-165.7-11.3c-167.2,0-167.2,14-334.3,14c-167.2,0-167.2-14-334.3-14
+        C83.4,22.2,41.3,28.6,0,33.5"/>
         </svg>
     </div>
     
@@ -39,32 +39,50 @@ get_header();
 
 <div id="about-main">
     <div class="container">
-        
-        <div class="about-items">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <div class="about-items">
 
-		<?php if( have_rows('content_blocks_about') ): ?>
-			<?php while( have_rows('content_blocks_about') ): the_row(); ?>
+                    <?php if( have_rows('content_blocks_about') ): ?>
+                        <?php while( have_rows('content_blocks_about') ): the_row(); ?>
 
-				<section class="about-item">
-					<div class="row">						
-						<div class="col-lg-12">
-							<div class="about-content">
-								<?php the_sub_field('content_block'); ?>
-							</div>
-							<!-- /.about-content -->
-						</div>
-						<!-- /.col-lg-7 -->
-					</div>
-					<!-- /.row -->
-				</section>
-				<!-- /.about-item -->						
-            <?php endwhile; ?>
-		<?php endif; ?>
+                            <?php if( get_row_layout() == 'intro_text' ): ?>
 
-        </div>
-        <!-- /.about-items -->
-        
-        
+                                <div class="about-content">
+                                    <?php the_sub_field('intro_content'); ?>
+                                </div>
+                                <!-- // content  -->
+
+                            <?php elseif( get_row_layout() == 'full_width_content' ): ?>
+
+                                <div class="about-content">
+                                    <?php the_sub_field('content_block'); ?>
+                                </div>
+                                <!-- // content  -->
+
+                            <?php elseif( get_row_layout() == 'full_width_image' ): ?>
+
+                                <div class="about-photo">
+                                    <?php
+                                    $imageID = get_sub_field('featured_image');
+                                    $image = wp_get_attachment_image_src( $imageID, 'full-image' );
+                                    $alt_text = get_post_meta($imageID , '_wp_attachment_image_alt', true);
+                                    ?> 
+                                    <div class="parent">
+                                        <img class="img-responsive" alt="<?php echo $alt_text; ?>" src="<?php echo $image[0]; ?>" /> 
+                                    </div>
+                                    <figcaption class="about-photo--description"><?php the_sub_field('caption'); ?></figcaption>
+                                </div>
+                                <!-- /.blog-photo -->  
+                            <?php endif; ?>
+                                                    
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+
+                </div>
+                <!-- /.about-items -->
+            </div>
+        </div> 
     </div>
     <!-- /.container -->
 </div>

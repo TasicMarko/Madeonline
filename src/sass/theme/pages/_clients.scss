@@ -1,0 +1,149 @@
+.clients-header {
+    min-height: 400px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+
+
+    .header-caption {
+        width: 100%;
+        height: 100px;
+        h1 {
+            color: #FFFFFF;
+            font-family: "Nunito", Sans-serif;
+            font-size: 55px;
+            font-weight: 800;
+            width: 100%;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+    }
+
+    .bottom {
+        position: relative;
+        bottom: -10px;
+        transform: rotate(180deg);
+
+    }
+
+    .shape svg {
+        display: block;
+        width: calc(100% + 1.3px);
+        position: initial;
+        left: 50%;
+    }
+
+    .shape .shape-fill {
+        fill: #fff;
+        transform-origin: center;
+        transform: rotateY(0deg)
+    }
+}
+
+.body {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #ededed;
+
+    .bottom {
+        position: relative;
+        bottom: -1px;
+        transform: rotate(180deg);
+        .shape-fill {
+            fill: #fff;
+            transform-origin: center;
+            transform: rotateY(0deg)
+        }
+    }
+
+    .top {
+        position: relative;
+        top: -40px;
+        .shape-fill {
+            fill: #fff;
+            transform-origin: center;
+            transform: rotateY(0deg)
+        }
+    }
+
+    .shape svg {
+        display: block;
+        width: calc(100% + 1.3px);
+        position: initial;
+        left: 50%;
+        opacity: 1;
+    }
+
+    .client-box{
+        width: 100%;
+        display: flex;
+        background-image: linear-gradient(160deg, #FFFFFFE3 0%, #EDEDED 100%);
+        background-color: transparent;
+        border-radius: 15px 15px 15px 15px;
+        margin-right: auto;
+        margin-left: auto;
+        position: relative;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.29);
+        margin-top: -50px;
+        margin-bottom: 100px;
+        .client-image{
+            text-align: center;
+            justify-content: center;
+            display: flex;
+            align-content: center;
+            align-items: center;
+            .parent{
+                max-width: 100%;
+                object-fit: cover;
+                margin: 50px;
+                .box-responsive{
+                    max-width: 70%;
+                    max-height: 250px;
+                    text-align: center;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+            
+        }
+        .client-content{
+            margin: 20px;
+            h2{
+                color: #F36C2A;
+                font-family: "Nunito", Sans-serif;
+                font-size: 30px;
+                font-weight: 800;
+                margin-bottom: 20px;
+            }
+            ul {
+                margin-bottom: 10px;
+                margin-left: 20px;
+                li {
+                    display: block;
+                    margin-left: 14px;
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                    a {
+                        color:#F36C2A;
+                        text-decoration: none;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }                
+                    &:before {
+                        content: "\2022";
+                        color: #F36C2A;
+                        font-weight: 700;
+                        display: inline-block;
+                        width: 1em;
+                        margin-left: -1em;
+                    }
+                }
+            }
+        }
+    }
+
+}
