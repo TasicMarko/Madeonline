@@ -44,6 +44,8 @@
 
 #page-footer {
   background-color: #F3F3F3;
+  position: relative;
+  z-index: 99;
 
   .footer-info {
     display: flex;

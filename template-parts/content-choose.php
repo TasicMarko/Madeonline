@@ -7,7 +7,7 @@
   <div class="section section--full" id="first">
     <div class="vertical-center">
       <div class="vertical-center__inner">
-        <h1>First Section</h1>
+        <h2>Why Choose Us</h2>
       </div>
     </div>
   </div>
@@ -28,13 +28,13 @@
   </div>
 
 
-  <div class="section section--full" id="third">
+  <!-- <div class="section section--full" id="third">
     <div class="vertical-center">
       <div class="vertical-center__inner">
         <h1>Third Section</h1>
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 </section>

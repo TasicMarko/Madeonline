@@ -1953,6 +1953,49 @@ jQuery(document).ready(function () {
     jQuery(this).parent(".service-wrapper").prevAll(".service-wrapper").find(".faq-answer-holder").slideUp();
     jQuery(this).parent(".service-wrapper").nextAll(".service-wrapper").find(".faq-answer-holder").slideUp();
   });
+
+  /// Change services mobile img on click
+
+  jQuery(".services-box").click(function () {
+    /// Test
+    var cls = jQuery(this).parent().attr('class').split(' ')[1];
+    // console.log(jQuery(this).parents().eq(3).find(".phone-img." + cls).toggleClass("hide-phone"));
+
+    if (jQuery(this).parents().eq(3).find(".phone-img." + cls).hasClass("hide-phone")) {
+      jQuery(this).parents().eq(3).find("#phone-wrap img").not("hide-phone").addClass("hide-phone");
+      jQuery(this).parents().eq(3).find(".phone-img." + cls).removeClass("hide-phone");
+    } else if (jQuery(this).parents().eq(3).find(".phone-img." + cls).not("hide-phone")) {
+
+      // jQuery(this).parents().eq(3).find("#phone-wrap img").not("hide-phone").addClass("hide-phone");
+    }
+
+    //Test end
+  });
+
+  /// Change services mobile img on hover
+
+  jQuery(".services-box").on('mouseover', function () {
+    var cls = jQuery(this).parent().attr('class').split(' ')[1];
+    // console.log(jQuery(this).parents().eq(3).find(".phone-img." + cls).toggleClass("hide-phone"));
+
+    if (jQuery(this).parents().eq(3).find(".phone-img." + cls).hasClass("hide-phone")) {
+      jQuery(this).parents().eq(3).find("#phone-wrap img").not("hide-phone").addClass("hide-phone");
+      jQuery(this).parents().eq(3).find(".phone-img." + cls).removeClass("hide-phone");
+    } else if (jQuery(this).parents().eq(3).find(".phone-img." + cls).not("hide-phone")) {
+
+      // jQuery(this).parents().eq(3).find("#phone-wrap img").not("hide-phone").addClass("hide-phone");
+    }
+  });
+
+  /////// Burger menu 
+
+  jQuery(".burger-menu ").on("click", ".bar", function () {
+    jQuery("#sidebar-menu-wrapper").slideToggle("linear");
+    jQuery(".bar").toggleClass('change');
+    // jQuery(".fish-navigation-mob li").slideRight();
+  });
+  /////// Burger menu end
+
   jQuery(".wrap .question").click(function () {
     jQuery(this).parent(".wrap").find(".answer").slideToggle();
     jQuery(this).parent(".wrap").prevAll(".wrap").find(".answer").slideUp();

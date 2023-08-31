@@ -8,10 +8,31 @@
                 <h2><?php echo $fields['services_title']; ?></h2>
             </div>
         </div>
-        <div class="row">
+        <div class="row parent">
             <div class="col-md-6 col-xs-12">
                 <div id="phone-wrap" class="services-phone-wrapper">
-                    <img src="/wp-content/uploads/2023/07/Web-Development-Image-Bg.webp" alt="phone img">
+
+
+                    <!-- Why repeater -->
+                    <?php if (have_rows('services_repeater')) {
+                        $i = 0;
+                        $clas = "hide-phone";
+                    while (have_rows('services_repeater')) {
+                        $i++;        
+                        the_row();
+                        $logo_img = get_sub_field('logo_img'); 
+
+                        if ($i > 1) { ?>
+                            <img class="phone-img <?php echo $i; ?> <?php echo $clas; ?>" src="<?php echo $logo_img['url']  ?>" alt="phone img">
+                       <?php }else { ?>
+                        <img class="phone-img <?php echo $i ?>" src="<?php echo $logo_img['url']  ?>" alt="phone img">
+                       <?php } ?>
+                        
+
+                    <?php } }?>
+                    <!-- Why repeater END -->
+
+
                 </div>
             </div>
             <div class="col-md-4 col-xs-12 service-wrap">
@@ -19,11 +40,13 @@
 
                         <!-- Why repeater -->
                         <?php if (have_rows('services_repeater')) {
+                            $i = 0;
                                 while (have_rows('services_repeater')) {
+                            $i++;        
                                     the_row();
-                                $logo_img = get_sub_field('logo_img');     ?>
+                                $logo_img = get_sub_field('logo');     ?>
 
-                        <div class="service-wrapper">
+                        <div class="service-wrapper <?php echo $i; ?>">
                             <div class="services-box">
                                 <div class="services-img-box">
                                     <img src="<?php echo $logo_img['url']  ?>" alt="logo">

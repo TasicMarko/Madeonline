@@ -19,9 +19,9 @@
             top: 190px;
             overflow: hidden;
             color: #f36c2a;
-            -webkit-animation: rotateWord 10s linear infinite 0s;
-            -ms-animation: rotateWord 10s linear infinite 0s;
-            animation: rotateWord 10s linear infinite 0s;
+            -webkit-animation: rotateWord 14s linear infinite 0s;
+            -ms-animation: rotateWord 14s linear infinite 0s;
+            animation: rotateWord 14s linear infinite 0s;
             &:nth-child(2) {
                 -webkit-animation-delay: 2s;
                 -ms-animation-delay: 2s;
@@ -46,6 +46,18 @@
                 animation-delay: 8s;
                 color: #f36c2a;
             }
+            &:nth-child(6) {
+              -webkit-animation-delay: 10s;
+              -ms-animation-delay: 10s;
+              animation-delay: 10s;
+              color: #f36c2a;
+          }
+          &:nth-child(7) {
+            -webkit-animation-delay: 12s;
+            -ms-animation-delay: 12s;
+            animation-delay: 12s;
+            color: #f36c2a;
+        }
             @-webkit-keyframes rotateWord {
                 0% {
                   opacity: 0;
@@ -377,6 +389,14 @@
     img {
       width: 100%;
       height: 100%;
+      transition: all 0.3s;
+      display: block;
+      opacity: 1;
+    }
+    .hide-phone {
+      display: none;
+      opacity: 0;
+      transition: opacity 200ms, display 200ms;
     }
   }
   .service-wrap {
@@ -448,73 +468,53 @@
 
 
 
-///// Choose ///// 
-
-.section {
-  padding: 20px;
-  box-sizing: border-box;
+///// Choose test ///// 
+$view-height: 100vh;
+$view-width: 100vw;
+.choose-test {
+  height: $view-width;  
+  width: $view-height;
+  transform: rotate(-90deg) translateX(-100%);
+  transform-origin: left top;
+  overflow-x: hidden;
+  overflow-y: auto;
+    
+    .sub-container {
+      transform: rotate(90deg) translateY(-100%);
+      transform-origin: left top;
+      white-space: nowrap;
+      
+      .child {
+        width: $view-width;
+        height: $view-height;
+        display: inline-flex;
+        vertical-align:top;
+        align-items: center;
+        justify-content: center;
+        white-space: break-spaces;
+        text-align: center;
+        padding: 100px 70px;
+        flex-direction: column;
+        background-color: #f2f0f0;
+        h2 {
+          color: #f36c2a;
+          font-size: 60px;
+          font-weight: 800;
+          padding-bottom: 60px;
+          margin-top: 10px;
+          text-align: center;
+        }
+      }
+    }
 }
-
-.vertical-center {
-  display: table;
-  height: 100%;
-  width: 100%;
-}
-
-.vertical-center__inner {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.section--full {
-  text-align: center;
-}
-
-.section--full,
-.section--vertical {
-  min-height: 50vh;
-  position: relative;
-}
-
-.block-list {
-  white-space: nowrap;
-}
-
-.block-list__item {
-  width: 250px;
-  height: 100vh;
-  min-height: 600px;
-  display: inline-block;
-  white-space: normal;
-  padding-right: 20px;
-}
-
-.block-list__item-inner {
-  background: #eee;
-  width: 100%;
-  height: 100%;
-}
-
-.block-list__item:first-child {
-  margin-left: 0;
-}
-
-#third {
-  background: #f5f5f5;
-}
-
-.scrollend {
-  transform: translateX(-1500px);
-}
-
-
-
 
 
 ////// Clients ///// 
 
 $speed: 75s;
-
+.clients {
+  margin-top: -640px;
+}
 .marquee__seperator {
   a {
     img {
@@ -558,3 +558,140 @@ $speed: 75s;
 }
 
 
+
+///// Form 
+
+.form-section {
+  padding: 136px 0;
+  background-color: transparent;
+  background-image: linear-gradient(140deg,#f36c2a 0,#fda24c 100%);
+  position: relative;
+  margin-top: 50px;
+  .form-wrapper {
+    margin: 0 auto;
+    padding: 5px;
+    border-radius: 30px;
+    background: #c2c0c0;
+    border: 1px solid #525151;
+    .form-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px;
+      border: 35px solid #000;
+      border-radius: 30px;
+      background: #fff;
+      position: relative;
+      &:hover .form-animation-div {
+        display: block;
+        transition: ease-in-out 0.3s;
+      }
+      .form-animation-div {
+        display: none;
+        position: absolute;
+        z-index: 99;
+        width: 249px;
+        bottom: 12px;
+        svg {
+          path {
+            stroke-dasharray: 1;
+            stroke-dashoffset: 2;
+            animation: lineanimation 1s cubic-bezier(0.4, 0, 0.2, 1)  alternate ;
+            @keyframes lineanimation {
+              0% {
+                stroke-dashoffset: 1;
+              }
+              100% {
+                stroke-dashoffset: 0;
+              }
+          }
+          }
+        }
+      }
+      p {
+        font-size: 25px;
+        font-weight: 300;
+        margin-bottom: 10px;
+      }
+      h3 {
+        color: #f36c2a;
+        font-family: Nunito,Sans-serif;
+        font-size: 45px;
+        font-weight: 800;
+        margin-bottom: 20px;
+      }
+      .wpcf7 {
+        .form-wr {
+          display: flex;
+          flex-direction: column;
+          width: 520px;
+          align-items: center;
+          label.field {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 10px;
+            .wpcf7-form-control-wrap {
+              width: 100%;
+              input {
+                width: 100%;
+                background-color: #fff;
+                border-width: 0 1px 1px;
+                border-radius: 25px 25px 25px 25px;
+                font-family: Nunito,Sans-serif;
+                font-size: 20px;
+                font-weight: 400;
+                color: #000;
+                height: 45px;
+                padding: 5px 15px;
+              }
+              textarea {
+                border: 1px solid #69727d;
+                padding: 5px 15px;
+                background-color: #fff;
+                border-width: 0 1px 1px;
+                border-radius: 25px 25px 25px 25px;
+                width: 100%;
+                font-family: Nunito,Sans-serif;
+                font-size: 20px;
+                font-weight: 400;
+                height: 67px;
+              }
+            }
+          }
+          .wpcf7-submit {
+            background-color: #f36c2a;
+            color: #fff;
+            font-family: Nunito,Sans-serif;
+            font-size: 30px;
+            font-weight: 500;
+            border-radius: 25px 25px 25px 25px;
+            border: none;
+            padding: 0px 22px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+///shape
+
+.form-shape {
+    overflow: hidden;
+    position: absolute;
+    left: -50px;
+    width: 115%;
+    line-height: 0;
+    direction: ltr;
+    &.shape-bottom {
+      transform: rotate(180deg);
+    }
+    &.shape-top {
+      top: -1px;
+    }
+    .elementor-shape-fill {
+      fill: #fff;
+    }
+}

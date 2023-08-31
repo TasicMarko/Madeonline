@@ -30,28 +30,49 @@
 	<?php wp_head(); ?>
 </head>
 <header class="madeonline-header">
+
 	<!-- Mobile menu sidebar -->
 	<div class="main-menu-sidebar">
-		<nav id="sidebar-menu-wrapper">
-			<div id="menu">    
-				<ul class="nav-links">
-					<?php
-					wp_nav_menu( array(
-						'menu'              => 'Menu-mobile',
-						'theme_location'    => 'Top menu',
-						'depth'             => 2,
-						'container'         => false,
-						'container_class'   => 'collapse navbar-collapse',
-						'container_id'      => false,
-						'menu_class'        => 'nav navbar-nav',
-						'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-						'items_wrap' => '%3$s',
-						'walker'            => new wp_bootstrap_navwalkermobile())
-					);
-					?>  
-				</ul>
+		<div class="container">
+			<div class="row">
+				<div class="sidebar-menu-wrap">
+					<div class="logo">
+						<a href="<?php home_url(); ?>">
+							<img src="/wp-content/uploads/2022/07/cropped-Made-Online-Main-Logo-1.webp" alt="">
+						</a>
+					</div>
+					<nav id="sidebar-menu-wrapper">
+						<div id="menu">    
+							<ul class="nav-links">
+								<?php
+								wp_nav_menu( array(
+									'menu'              => 'Menu-mobile',
+									'theme_location'    => 'Top menu',
+									'depth'             => 2,
+									'container'         => false,
+									'container_class'   => 'collapse navbar-collapse',
+									'container_id'      => false,
+									'menu_class'        => 'nav navbar-nav',
+									'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+									'items_wrap' => '%3$s',
+									'walker'            => new wp_bootstrap_navwalkermobile())
+								);
+								?>  
+							</ul>
+						</div>
+					</nav>
+					<div class="burger-menu">
+						<!-- <button class="burger"><i class="fa fa-bars fa-3x" aria-hidden="true"></i></button>
+						<button class="x"><i class="fa fa-times fa-3x" aria-hidden="true"></i></button> -->
+						<div class="bar">
+							<span class="bar-1"> </span>
+							<span class="bar-2"> </span>
+							<span class="bar-3"> </span>
+						</div>
+					</div>
+				</div>
 			</div>
-		</nav>
+		</div>
 	</div>
 	<!-- Mobile menu sidebar END -->
 
@@ -61,7 +82,7 @@
 			<div class="row">
 				<div class="header-wrapper">
 					<div class="logo">
-						<a href="#">
+						<a href="<?php home_url(); ?>">
 							<img src="/wp-content/uploads/2022/07/cropped-Made-Online-Main-Logo-1.webp" alt="">
 						</a>
 					</div>
