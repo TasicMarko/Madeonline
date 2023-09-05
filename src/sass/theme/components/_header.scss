@@ -33,12 +33,12 @@ p {
                 }
             }
             #sidebar-menu-wrapper {
-                background-color: #fff;
+                // background-color: #fff;
                 // padding-top: 65px;
                 position: absolute;
                 right: 0;
                 left: 0;
-                top: 85px;
+                top: 77px;
                 display: none;
                 justify-content: center;
                 align-items: center;
@@ -64,9 +64,34 @@ p {
                             font-weight: 500;
                             color: #2b59c3;
                             &:hover {
-                                color: #95daf3;
+                                color: #f36c2a;
                                 transition: ease-in-out 0.3s;
                             }
+                        }
+                    }
+                    .menu-item-has-children {
+                        .dropdown-some {
+                            visibility: hidden;
+                            height: 0px;
+                            transition: ease-in-out 0.3s;
+                            .menu-item {
+                                transition: ease-in-out 0.3s;
+                                a {
+                                    font-size: 16px;
+                                    transition: ease-in-out 0.3s;
+                                    &:hover {
+                                        color: #f36c2a;
+                                    }
+                                }
+                            }
+                        }
+                        &:hover .dropdown-some {
+                            display: block;
+                            transition: ease-in-out 0.3s;
+                            background-color: #fff;
+                            margin-top: 10px;
+                            visibility: visible;
+                            height: auto;
                         }
                     }
                 }
@@ -83,8 +108,9 @@ p {
                         width:5em;
                         display: block;
                         width: 40px;
-                        border-top: 6px solid white;
-                        padding-top:6px;
+                        // border-top: 6px solid white;
+                        padding-top:5px;
+                        margin-top: 4px;
                         cursor:pointer;
                         transition:0.3s;
                         background-color: #000;
@@ -93,8 +119,9 @@ p {
                         width:5em;
                         display: block;
                         width: 40px;
-                        border-top: 6px solid white;
-                        padding-top:5px;  
+                        // border-top: 6px solid white;
+                        padding-top:5px;
+                        margin-top: 4px;  
                         display:fixed;
                         transition:0.3s;
                         background-color: #000;
@@ -104,8 +131,9 @@ p {
                         width:5em;
                         display: block;
                         width: 40px;
-                        border-top: 6px solid white;
+                        // border-top: 6px solid white;
                         padding-top:5px;
+                        margin-top: 4px;
                         transition:0.3s;
                         background-color: #000;
                         }
@@ -113,12 +141,12 @@ p {
                  .change {
                     .bar-1 {
                         -webkit-transform: rotate(-45deg) translate(-10px, 5px);
-                            transform: rotate(-45deg) translate(-10px, 8px);
+                            transform: rotate(-45deg) translate(-7px, 8px);
                     }
                     .bar-2 {opacity:0;}
                     .bar-3 {
                         -webkit-transform: rotate(45deg) translate(-10px, 5px);
-                        transform: rotate(45deg) translate(-10px, -4px);
+                        transform: rotate(45deg) translate(-5px, -6px);
                     }
                  }
             }
@@ -155,6 +183,14 @@ p {
                             padding: 13px 20px;
                             color: #000;
                             transition: ease-in-out 0.3s;
+                            @include bp(laptop-lg) {
+                                font-size: 23px;
+                                padding: 13px 18px;
+                            }
+                            @include bp(laptop) {
+                                font-size: 19px;
+                                padding: 13px 15px;
+                            }
                         }
                         .dropdown-some {
                             visibility: hidden;

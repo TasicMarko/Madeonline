@@ -22,6 +22,9 @@
             -webkit-animation: rotateWord 14s linear infinite 0s;
             -ms-animation: rotateWord 14s linear infinite 0s;
             animation: rotateWord 14s linear infinite 0s;
+            @include bp(laptop) {
+              top: 240px;
+            }
             &:nth-child(2) {
                 -webkit-animation-delay: 2s;
                 -ms-animation-delay: 2s;
@@ -175,6 +178,9 @@
             top: 0;
             transform: rotate(80deg);
             left: 120px;
+            @include bp(laptop) {
+              left: 0;
+            }
             .wave {
                 position: fixed;
                 top: 0;
@@ -418,6 +424,9 @@
             font-weight: bold;
             color: #FFFFFF;
             padding-left: 10px;
+            @include bp(laptop) {
+              font-size: 21px;
+            }
           }
           .services-img-box {
             height: 38px;
@@ -478,6 +487,9 @@ $view-width: 100vw;
   transform-origin: left top;
   overflow-x: hidden;
   overflow-y: auto;
+  @include bp(laptop) {
+    width: 80vh;
+  }
     
     .sub-container {
       transform: rotate(90deg) translateY(-100%);
@@ -496,6 +508,9 @@ $view-width: 100vw;
         padding: 100px 70px;
         flex-direction: column;
         background-color: #f2f0f0;
+        @include bp(laptop) {
+          height: 80vh;
+        }
         h2 {
           color: #f36c2a;
           font-size: 60px;
@@ -514,6 +529,9 @@ $view-width: 100vw;
 $speed: 75s;
 .clients {
   margin-top: -640px;
+  @include bp(laptop) {
+    margin-top: -300px;
+  }
 }
 .marquee__seperator {
   a {
@@ -685,6 +703,9 @@ $speed: 75s;
     width: 115%;
     line-height: 0;
     direction: ltr;
+    @include bp(laptop) {
+      width: 150%;
+    }
     &.shape-bottom {
       transform: rotate(180deg);
     }
