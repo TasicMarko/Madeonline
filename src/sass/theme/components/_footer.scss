@@ -51,6 +51,10 @@
     display: flex;
     width: 100%;
     padding: 50px 0px 30px 0px;
+    @include bp(tablet-all){
+      padding: 30px 0;
+      display: block;
+    }
 
     .footer-left {
       width: 100%;
@@ -62,11 +66,20 @@
         padding-top: 30px;
 
         img {
-          width: 50%;
+          width: 60%;
           display: block;
           margin-left: auto;
           margin-right: auto;
           text-align: center;
+          @include bp(desktop){
+            width: 70%;
+          }
+          @include bp(tablet-lg){
+            width: 90%;
+          }
+          @include bp(tablet-all){
+            width: 35%;
+          }
         }
       }
 
@@ -77,6 +90,10 @@
     .footer-middle {
       .info-block {
         text-align: center;
+        width: 100%;
+        @include bp(tablet-all){
+          margin: 20px 0;
+        }
 
         p {
           color: #000000;
@@ -121,40 +138,35 @@
       .footer-socials {
         width: 100%;
         text-align: center;
-
+        display: inline-block;
         p {
           color: #000000;
           font-family: "Nunito", Sans-serif;
           font-size: 25px;
           font-weight: 800;
           margin-bottom: 20px;
-          // text-align: center;
-
         }
         ul{
+          width: 100%;
+          text-align: center;
           display: flex;
-          margin-left: 60px;
+          align-items: center;
+          gap: 30px;
+          justify-content: center;
+          flex-wrap: wrap;
           li{
-            i {
-              font-size: 45px;
-              margin-right: 35px;
-              color: #F36833;
+            img{
+              width: 45px;
+              height: 45px;
             }
           }
-          img{
-            width: 45px;
-          }
-          
-        }
-
-        
+        }                
       }
     }
   }
 
   .page-end {
     background-color: #F36833;
-
     p {
       text-align: center;
       color: #FFFFFF;
@@ -163,6 +175,5 @@
       font-weight: 600;
       padding: 10px;
     }
-
   }
 }

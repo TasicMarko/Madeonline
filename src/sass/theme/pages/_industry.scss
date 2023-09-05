@@ -49,11 +49,11 @@
 .industry-body{
     background-color: #fff;
     #industry-boxes{
-        padding: 50px 150px;
+        padding: 50px 100px;
         .industry-box{
             margin-bottom: 20px;
-            width: 260px;
-            height: 280px;
+            // width: 260px;
+            // height: 280px;
             object-fit: cover;
             border-radius: 10px;
             overflow: hidden;
@@ -345,7 +345,7 @@
         }
         
         
-        .content-left {
+        .content-left, .content-left-side-no-frame {
             padding-right: 15px;
             padding-left: 0px;
             p{
@@ -403,7 +403,7 @@
             }
         }
 
-        .content-right {
+        .content-right, .content-right-side-no-frame {
             padding-right: 0px;
             padding-left: 15px;
             p{
@@ -528,9 +528,7 @@
             align-items: center;
             height: 100%;
             img {
-                width: 100%;    
-                // opacity: 0.76;
-                border-radius: 102px 102px 102px 102px;
+                width: 100%;
                 margin: auto; 
                 
                             
@@ -539,27 +537,12 @@
     }
     
 }
-// .blog-detailed--accordion-wrap {
-//     margin-top: 30px;
-//     margin-bottom: 60px;
-//     // @include bp(sm-down) {
-//     //     margin-top: 0;
-//     //     margin-bottom: 0;
-//     // }
-//     h3 {
-//         margin-top: 30px;
-//     }
-    
-// }
 
 
 .industry-single-header {
-    // background-image: linear-gradient(180deg, #F36C2A 0%, #FDA24C 100%);
-    // background-color: #F36C2A;
-    
     min-height: 400px;
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: center;
     background-size: cover;
     background-attachment: fixed;
 
@@ -568,8 +551,6 @@
     .header-caption {
         width: 100%;
         height: 100px;
-
-        // overflow: hidden;
         h1 {
             color: #FFFFFF;
             font-family: "Nunito", Sans-serif;

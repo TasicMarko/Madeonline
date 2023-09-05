@@ -11,3 +11,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // general
 add_image_size('industry-image', 265, 280, TRUE);
+add_image_size('icon-image', 45, 45, TRUE);
+

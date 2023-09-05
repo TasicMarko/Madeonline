@@ -17,7 +17,7 @@
     <div class="container">
         <div class="row">
             <div class="footer-info">
-                <div class="col-md-4">
+                <div class="col-lg-4 col-xs-12">
                         <div class="footer-left">
                             <div class="container">
                                 <div class="row">
@@ -33,7 +33,7 @@
                         <!-- /.container -->
                     </div>
                     <!-- /.footer-top -->
-                    <div class="col-md-4">
+                    <div class="col-lg-5 col-xs-12">
                         <div class="footer-middle">
                             <div class="container">
                                 <div class="row">
@@ -57,43 +57,43 @@
                         <!-- /.container -->
                     </div>
                     <!-- /.footer-middle -->
-                    <div class="col-md-4">
+                    <div class="col-lg-3 col-xs-12">
                         <div class="footer-right">
                             <div class="container">
                                 <div class="row">
 
                                     <div class="footer-socials">
                                         <p><strong><?php the_field('follow_us_footer', 'options'); ?></strong></p>
-
                                         <ul>
 
-                                            <?php if( have_rows('social_networks_general', 'options') ): ?>
-                                                <?php while( have_rows('social_networks_general', 'options') ): the_row(); ?>
+                                        <?php if( have_rows('social_networks_general', 'options') ): ?>
+                                            <?php while( have_rows('social_networks_general', 'options') ): the_row();
+                                            $logo_img = get_sub_field('icon_image');
+                                            ?>
 
-                                                <li>
-                                                    <a href="<?php the_sub_field('link_to_network'); ?>" target="_blank" aria-label="Follow Us"><?php the_sub_field('icon_code'); ?></a>
 
+                                            <li>
+                                                <!-- <a href="<?php the_sub_field('link_to_network'); ?>" target="_blank" aria-label="Follow Us"><?php the_sub_field('icon_code'); ?></a> -->
+                                                <a href="<?php the_sub_field('link_to_network'); ?>" target="_blank" aria-label="Follow Us"> 
+                                                    <img src="<?php  echo $logo_img['url']; ?>">
                                                     
-                                                </li>
-                                                
+                                                </a>
 
-                                                <?php endwhile; ?>
-                                            <?php endif; ?>
-                                        <a href="https://clutch.co/profile/made-online" target="_blank" aria-label="Follow Us"><img src="/wp-content/uploads/2022/07/Clutch-Logo-BairesDev.svg" alt="Made Online Logo"></a>
+                                                
+                                            </li>
+                                            
+
+                                            <?php endwhile; ?>
+                                        <?php endif; ?>
 
                                         </ul>
-                                        <!-- <a href="https://clutch.co/profile/made-online">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
-                                                <title>Clutch Logo-01</title>
-                                                <g>
-                                                    <path d="M556.408,556.282a211.05,211.05,0,0,1-142.588,52.88c-120.869,0-209.632-88.763-209.632-210.577s85.93-206.8,
-                                                    209.632-206.8a216.239,216.239,0,0,1,143.532,51.936l26.441,22.663L700.885,149.293l-29.273-27.385A378.942,378.942,0,0,0,
-                                                    413.82,25.591c-217.186,0-374.883,156.752-374.883,372.05S200.411,774.413,413.82,774.413A379.044,379.044,0,0,0,673.5,
-                                                    676.207l28.329-26.441L582.848,532.674Z" fill="#17313b"></path>
-                                                    <circle cx="408.155" cy="399.53" r="125.591" fill="#ef4335"></circle>
-                                                </g>
-                                            </svg>
-                                        </a> -->
+                                        
+
+                                        
+                                        
+
+
+                                       
                                     </div>
                                     <!-- /.footer-socials -->
                                 </div>

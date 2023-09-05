@@ -85,11 +85,11 @@
             display: flex;
             flex-wrap: wrap;
             position: relative;
-            &:hover{
-                .service-flip{
-                    transform: rotateY(180deg);
-                }    
-            }
+            // &:hover{
+            //     .service-flip{
+            //         transform: rotateY(180deg);
+            //     }    
+            // }
             .service-info {
 
                 h2 {
@@ -115,6 +115,10 @@
             .service-flip{
                 transition: transform 0.8s;
                 transform-style: preserve-3d;
+                &:hover{
+                        transform: rotateY(180deg);
+                     
+                }
                 // display: flex;
                 .service-front, .service-back{
                     // position: absolute;

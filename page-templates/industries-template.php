@@ -43,7 +43,7 @@ get_header();
         <div class="row" id="industry-boxes">
             <?php if( have_rows('box_repeater') ): ?>
                 <?php while( have_rows('box_repeater') ): the_row(); ?>
-                    <div class="col-md-3">
+                    <div class="col-md-6 col-lg-3">
                         <div class="industry-box">
                             <a href="<?php the_sub_field('link_to_page'); ?>">
                                 <?php

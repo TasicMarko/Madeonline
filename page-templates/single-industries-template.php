@@ -183,6 +183,29 @@ get_header();
                             </div>
                             <!-- // wrapper  -->
 
+                        <?php elseif( get_row_layout() == 'content_left_content_right_no_frame' ): ?>
+
+                            <div class="content-wrapper ">
+                                <div class="row ">
+
+                                    <div class="col-lg-6 col-container">
+                                        <div class="content-left-side-no-frame col">
+                                            <?php the_sub_field('content_left_side_no_frame'); ?>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-6 col-container">
+                                        <div class="content-right-side-no-frame col">
+                                            <?php the_sub_field('content_right_side_no_frame'); ?>
+                                        </div>
+                                    </div>
+                                    <!-- // col  -->                                
+                                    
+                                    <!-- // blokc  -->
+                                </div>
+                            </div>
+                            <!-- // wrapper  -->
+
                         <?php elseif( get_row_layout() == 'frame_left' ): ?>
 
                             <div class="content-wrapper ">
