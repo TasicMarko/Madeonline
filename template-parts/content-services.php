@@ -8,8 +8,10 @@
                 <h2><?php echo $fields['services_title']; ?></h2>
             </div>
         </div>
-        <div class="row parent">
-            <div class="col-md-6 col-xs-12">
+    </div>
+    <div class="container">
+    <div class="row parent">
+            <div class="col-md-6 col-sm-5 col-xs-12">
                 <div id="phone-wrap" class="services-phone-wrapper">
 
 
@@ -35,7 +37,7 @@
 
                 </div>
             </div>
-            <div class="col-md-4 col-xs-12 service-wrap">
+            <div class="col-md-6 col-sm-7 col-xs-12 service-wrap">
                 <div class="services-wrapper">
 
                         <!-- Why repeater -->

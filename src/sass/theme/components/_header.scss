@@ -33,7 +33,7 @@ p {
                 }
             }
             #sidebar-menu-wrapper {
-                // background-color: #fff;
+                background-color: #fff;
                 // padding-top: 65px;
                 position: absolute;
                 right: 0;
@@ -58,6 +58,7 @@ p {
                     .menu-item {
                         padding: 10px;
                         border-bottom: 1px solid #efefef;
+                        text-align: start;
                         a {
                             padding: 10px 0;
                             font-size: 18px;
@@ -70,10 +71,24 @@ p {
                         }
                     }
                     .menu-item-has-children {
+                        position: relative;
+                        .made-chevron {
+                            position: absolute;
+                            top: 0px;
+                            right: 15px;
+                            padding: 10px;
+                        }
                         .dropdown-some {
-                            visibility: hidden;
-                            height: 0px;
-                            transition: ease-in-out 0.3s;
+                            display: block;
+                            background-color: #f7d6c6;
+                            margin-top: 15px;
+                            display: none;
+                        }
+                        .dropdown-some.hide-nav{
+                            // visibility: hidden;
+                            // height: 0px;
+                            // transition: ease-in-out 0.3s;
+                            // display: none;
                             .menu-item {
                                 transition: ease-in-out 0.3s;
                                 a {
@@ -84,14 +99,6 @@ p {
                                     }
                                 }
                             }
-                        }
-                        &:hover .dropdown-some {
-                            display: block;
-                            transition: ease-in-out 0.3s;
-                            background-color: #fff;
-                            margin-top: 10px;
-                            visibility: visible;
-                            height: auto;
                         }
                     }
                 }
@@ -113,7 +120,8 @@ p {
                         margin-top: 4px;
                         cursor:pointer;
                         transition:0.3s;
-                        background-color: #000;
+                        background-color: #f36c2a;
+                        border-radius: 20px;
                       }
                        .bar-2 {     
                         width:5em;
@@ -124,7 +132,8 @@ p {
                         margin-top: 4px;  
                         display:fixed;
                         transition:0.3s;
-                        background-color: #000;
+                        background-color: #f36c2a;
+                        border-radius: 20px;
                         }
                          .bar-3 {  
                       
@@ -135,7 +144,8 @@ p {
                         padding-top:5px;
                         margin-top: 4px;
                         transition:0.3s;
-                        background-color: #000;
+                        background-color: #f36c2a;
+                        border-radius: 20px;
                         }
                  }
                  .change {
@@ -173,6 +183,17 @@ p {
                     display: flex;
                     .menu-item-has-children {
                         position: relative;
+                        // padding-right: 5px;
+                        .chevron {
+                            @include bp(laptop-lg){
+                                top: 5px;
+                            }
+                            @include bp(desktop-lg){
+                                top: 5px;
+                            }
+                            position: absolute;
+                            right: -8px;
+                        }
                     }
                     li.menu-item {
                         
