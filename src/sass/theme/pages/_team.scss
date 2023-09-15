@@ -1,10 +1,15 @@
 .team-header {
     background-image: linear-gradient(180deg, #F36C2A 0%, #FDA24C 100%);
     min-height: 300px;
+    
 
     .header-caption {
         width: 100%;
         height: 100px;
+        @include bp(mobile){
+            height: 80px;
+            
+        }
 
         // overflow: hidden;
         h1 {
@@ -23,6 +28,19 @@
         position: relative;
         bottom: -1px;
         transform: rotate(180deg);
+
+        @include bp(tablet){
+            bottom: -23px;
+        }
+        @include bp(mobile-xl){
+            bottom: -43px;
+        }
+        @include bp(mobile){
+            bottom: -78px;
+        }
+        @include bp(mobile-xs){
+            bottom: -89px;
+        }
     }
 
     .shape svg {
@@ -37,6 +55,7 @@
         transform-origin: center;
         transform: rotateY(0deg);
         height: 450px;
+        
     }
     
     
@@ -44,10 +63,18 @@
 
 .team {
     height: 330px;
+    @include bp(mobile-xs){
+        height: 250px;
+        
+    }
+    @include bp(mobile){
+        height: 300px;
+        
+    }
     // background-position: center center;
     // background-repeat: no-repeat;
     // background-size: cover;
-    // background-attachment: fixed;
+    background-attachment: fixed;
     
 
     // .bottom {
@@ -92,6 +119,42 @@
                 margin-right: auto;
                 position: relative;
                 top: -200px;
+                @include bp(desktop-lg){
+                    width: 60%;
+                    top: -180px;
+                }
+                @include bp(desktop){
+                    width: 75%;
+                    top: -140px;
+                }
+                @include bp(tablet-lg){
+                    width: 85%;
+                    top: -130px;
+                    
+                }
+                @include bp(tablet){
+                    width: 100%;
+                    top: -100px;
+                    
+                }
+                @include bp(mobile-xl){
+                    width: 130%;
+                    top: -100px;
+                    left: -50px;
+                    
+                }
+                @include bp(mobile){
+                    width: 130%;
+                    top: -20px;
+                    left: -40px;
+                    
+                }
+                @include bp(mobile-xs){
+                    width: 130%;
+                    top: -20px;
+                    left: -30px;
+                    
+                }
             }
         }
     }

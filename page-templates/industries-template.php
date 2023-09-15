@@ -30,7 +30,7 @@ get_header();
     <!-- /.container -->
     <div class="shape bottom">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-        viewBox="0 0 1000 100" style="enable-background:new 0 0 1000 100;" xml:space="preserve">
+        viewBox="0 0 1000 100" style="enable-background:new 0 10 1000 100;" xml:space="preserve">
             <path class="shape-fill" d="M0,0l1000,0l0,33.5c-41.3-5-83.4-11.3-165.7-11.3c-167.2,0-167.2,14-334.3,14c-167.2,0-167.2-14-334.3-14
         C83.4,22.2,41.3,28.6,0,33.5"/>
         </svg>
@@ -43,7 +43,7 @@ get_header();
         <div class="row" id="industry-boxes">
             <?php if( have_rows('box_repeater') ): ?>
                 <?php while( have_rows('box_repeater') ): the_row(); ?>
-                    <div class="col-md-6 col-lg-3">
+                    <div class="col-md-6 col-lg-3 col-sm-12">
                         <div class="industry-box">
                             <a href="<?php the_sub_field('link_to_page'); ?>">
                                 <?php

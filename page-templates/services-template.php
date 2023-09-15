@@ -58,12 +58,12 @@ get_header();
                                 <div class="service-box">                                    
                                     <?php if( have_rows('service_box') ): ?>
                                         <?php while( have_rows('service_box') ): the_row(); ?>
-                                            <div class="col-md-4 service">
+                                            <div class="col-md-6 col-lg-4 service">
                                                 
                                                 <div class="service-info">
                                                     <?php the_sub_field('service_info'); ?>
                                                 </div>  
-                                                <div class="service-flip hover">
+                                                <div class="service-flip">
                                                     <div class="service-front">
                                                         <?php
                                                         $imageID = get_sub_field('service_icon');
@@ -85,10 +85,18 @@ get_header();
                                                         <h2> 
                                                             <?php the_sub_field('clients_service'); ?>
                                                         </h2>
+                                                        <div class="image-holder">
+                                                            <?php
+                                                            $imageID = get_sub_field('clients');
+                                                            $image = wp_get_attachment_image_src( $imageID, 'full-image' );
+                                                            $alt_text = get_post_meta($imageID , '_wp_attachment_image_alt', true);
+                                                            ?> 
+
+                                                            <img class="img-responsive" alt="<?php echo $alt_text; ?>" src="<?php echo $image[0]; ?>" /> 
+                                                        </div>
+                                                        <a href="<?php the_sub_field('button_link'); ?>" class="btn-cta"><?php the_sub_field('button_label'); ?></a>
                                                     </div> 
                                                 </div>
-                                                
-
                                             </div>
                                         <?php endwhile; ?>
                                     <?php endif; ?>

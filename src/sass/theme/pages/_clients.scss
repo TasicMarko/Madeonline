@@ -24,6 +24,27 @@
         position: relative;
         bottom: -10px;
         transform: rotate(180deg);
+        @include bp(desktop-lg){
+            bottom: -57px;
+        }
+        @include bp(desktop){
+            bottom: -81px;
+        }
+        @include bp(tablet-lg){
+            bottom: -101px;
+        }
+        @include bp(tablet){
+            bottom: -123px;
+        }
+        @include bp(mobile-xl){
+            bottom: -143px;
+        }
+        @include bp(mobile){
+            bottom: -158px;
+        }
+        @include bp(mobile-xs){
+            bottom: -169px;
+        }
 
     }
 
@@ -61,7 +82,7 @@
 
     .top {
         position: relative;
-        top: -40px;
+        // top: -40px;
         .shape-fill {
             fill: #fff;
             transform-origin: center;
@@ -87,8 +108,11 @@
         margin-left: auto;
         position: relative;
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.29);
-        margin-top: -50px;
-        margin-bottom: 100px;
+        // padding-top: -30px;
+        margin-bottom: 70px;
+        @include bp(mobile-all){       
+            display: block;           
+        }
         .client-image{
             text-align: center;
             justify-content: center;
@@ -99,28 +123,47 @@
                 max-width: 100%;
                 object-fit: cover;
                 margin: 50px;
+                @include bp(mobile-all){       
+                    margin: 20px;                 
+                }
                 .box-responsive{
                     max-width: 70%;
                     max-height: 250px;
                     text-align: center;
                     margin-left: auto;
                     margin-right: auto;
+                    @include bp(laptop){       
+                        max-width: 100%;                 
+                    }
+                    @include bp(mobile-all){       
+                        max-width: 80%;                 
+                    }
                 }
             }
             
         }
         .client-content{
             margin: 20px;
+            @include bp(mobile-all){       
+                margin-left: 5px;                 
+            }
             h2{
                 color: #F36C2A;
                 font-family: "Nunito", Sans-serif;
                 font-size: 30px;
                 font-weight: 800;
                 margin-bottom: 20px;
+                @include bp(mobile-all){       
+                    text-align: center;                 
+                }
             }
             ul {
                 margin-bottom: 10px;
                 margin-left: 20px;
+                @include bp(mobile-all){       
+                    margin-left: 5px;
+                    padding-bottom: 10px;                 
+                }
                 li {
                     display: block;
                     margin-left: 14px;

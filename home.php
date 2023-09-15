@@ -96,7 +96,7 @@ get_header();
                                 while(have_posts()): the_post();
                                     ?>
                                                     
-                                    <div class="col-md-4">
+                                    <div class="col-lg-4 col-md-6">
                                         <div class="blog-box">
                                             <div class="blog-photo">
                                                 <a href="<?php echo get_permalink(); ?>">

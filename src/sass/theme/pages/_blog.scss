@@ -4,6 +4,9 @@
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
+    @include bp(tablet-all){
+        background-position: center top;
+    }
 
     .header-caption {
         width: 100%;
@@ -28,6 +31,27 @@
         position: relative;
         bottom:-1px;
         transform: rotate(180deg);
+        @include bp(desktop-lg){
+            bottom: -47px;
+        }
+        @include bp(desktop){
+            bottom: -71px;
+        }
+        @include bp(tablet-lg){
+            bottom: -92px;
+        }
+        @include bp(tablet){
+            bottom: -114px;
+        }
+        @include bp(mobile-xl){
+            bottom: -133px;
+        }
+        @include bp(mobile){
+            bottom: -148px;
+        }
+        @include bp(mobile-xs){
+            bottom: -159px;
+        }
 
     }
 
@@ -66,6 +90,9 @@
                 
                 &:last-of-type {
                     margin-right: 0;
+                    @include bp(laptop){
+                        margin-right: 25px;
+                    }
                 }
                 a {
                     font-family: "Nunito", Sans-serif;
@@ -479,9 +506,12 @@
     .author{
         display: flex;
         margin-bottom: 30px;
+        // align-items: center;
+        justify-content: center;
+        width: 100%;
         img{
             border-radius: 50%;
-            margin-left: 370px;
+            // margin-left: 370px;
             margin-right: 20px;
         }
 
@@ -539,7 +569,7 @@
         bottom: -105px;
 
     svg{
-        // width: 100%;
+        width: 100%;
         height: 250px;
         transform: translateX(-0%) rotateY(0deg);
     }
@@ -579,10 +609,16 @@
         }
     }
     .blog-photo:first-of-type{
+        @include bp(mobile-xs){
+            padding-top: 45px;
+        }
         img{
             border-radius: 10px 10px 10px 10px;
             box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
             margin-bottom: 45px;
+            @include bp(mobile-xs){
+                margin-bottom: 55px;
+            }
         }
     }
     p{
@@ -965,6 +1001,7 @@
             border-radius: 25px;
             text-transform: uppercase;
             letter-spacing: 1px;
+            margin-bottom: 20px;
             a{
                 font-family: "Nunito", Sans-serif;
                 color: #fff;

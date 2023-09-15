@@ -29,6 +29,18 @@
         position: relative;
         bottom: -1px;
         transform: rotate(180deg);
+        @include bp(tablet){
+            bottom: -23px;
+        }
+        @include bp(mobile-xl){
+            bottom: -43px;
+        }
+        @include bp(mobile){
+            bottom: -58px;
+        }
+        @include bp(mobile-xs){
+            bottom: -69px;
+        }
 
     }
 
@@ -50,8 +62,19 @@
     background-color: #fff;
     #industry-boxes{
         padding: 50px 100px;
+        @include bp(laptop-lg){
+            padding: 50px;
+        }
+        @include bp(laptop){
+        padding: 50px 0;
+        }
+        // @include bp(tablet-lg){
+        //     padding: 50px;
+        // }
+        
         .industry-box{
             margin-bottom: 20px;
+
             // width: 260px;
             // height: 280px;
             object-fit: cover;
@@ -166,6 +189,7 @@
             font-size: 17px;
             line-height: 1.6em;
             font-weight: 400;
+            margin-top: 10px;
             margin-bottom: 35px;
         }
         b, strong{
@@ -231,6 +255,9 @@
             border-radius: 25px;
             padding: 8px 30px;
             box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+            @include bp(mobile-xs){
+                font-size: 20px;
+            }
         }
     }
     .blog-detailed--accordion {
@@ -468,6 +495,9 @@
             border: 4px solid #F26624;
             border-radius: 11px;
             box-shadow: 14px 26px 10px -2px rgba(242.00000000000006, 102, 36.00000000000002, 0.42);
+            @include bp(tablet-all){
+                margin-bottom: 20px;
+            }
             p{
                 color: #000000;
                 font-family: "Nunito", Sans-serif;
@@ -567,6 +597,27 @@
         position: relative;
         bottom: -10px;
         transform: rotate(180deg);
+        @include bp(desktop-lg){
+            bottom: -57px;
+        }
+        @include bp(desktop){
+            bottom: -81px;
+        }
+        @include bp(tablet-lg){
+            bottom: -101px;
+        }
+        @include bp(tablet){
+            bottom: -123px;
+        }
+        @include bp(mobile-xl){
+            bottom: -143px;
+        }
+        @include bp(mobile){
+            bottom: -158px;
+        }
+        @include bp(mobile-xs){
+            bottom: -169px;
+        }
 
     }
 

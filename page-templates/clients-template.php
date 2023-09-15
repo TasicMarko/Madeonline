@@ -50,9 +50,9 @@ get_header();
         <div class="row">
         <?php if( have_rows('clients_body_content') ): ?>
                 <?php while( have_rows('clients_body_content') ): the_row(); ?>
-                    <div class="col-md-10 offset-md-1">
+                    <div class="col-lg-10 offset-lg-1 col-sm-12">
                         <div class="client-box">
-                            <div class="col-md-7 client-image">
+                            <div class="col-md-7 client-image col-sm-12">
                                 <a href="<?php the_sub_field('client_link'); ?>">
                                     <?php
                                     $imageID = get_sub_field('client_image');
@@ -64,7 +64,7 @@ get_header();
                                     </div>
                                 </a>   
                             </div>
-                            <div class="col-md-5 client-content">
+                            <div class="col-md-5 client-content col-sm-12">
                                 <?php the_sub_field('client_content'); ?>
 
                             </div>

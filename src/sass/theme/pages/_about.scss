@@ -23,6 +23,18 @@
         position: relative;
         bottom: -1px;
         transform: rotate(180deg);
+        @include bp(tablet){
+            bottom: -23px;
+        }
+        @include bp(mobile-xl){
+            bottom: -43px;
+        }
+        @include bp(mobile){
+            bottom: -58px;
+        }
+        @include bp(mobile-xs){
+            bottom: -69px;
+        }
 
     }
 

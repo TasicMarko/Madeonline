@@ -68,7 +68,7 @@ get_header();
             <div class="executives">
                 <?php if( have_rows('executives') ): ?>
                     <?php while( have_rows('executives') ): the_row(); ?>
-                        <div class="col-md-4">
+                        <div class="col-xl-4 col-md-6">
                             <div class="exec-box">
                                 <div class="exec-basic">
                                     
@@ -111,7 +111,7 @@ get_header();
                 <?php if( have_rows('employees') ): ?>
                     <?php while( have_rows('employees') ): the_row(); ?>
                         
-                        <div class="col-md-3">
+                        <div class="col-xl-3 col-md-6">
                             <div class="empl-box">
                                 <div class="empl-basic">
                                 <?php

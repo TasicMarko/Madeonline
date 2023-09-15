@@ -45,7 +45,7 @@ get_header();
     </div>
 
     <div class="blog-detailed-bottom">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1523 100" preserveAspectRatio="none">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
             <path class="shape-fill" d="M0,6V0h1000v100L0,6z"></path>
         </svg>
     </div>
@@ -251,8 +251,8 @@ get_header();
                             $loop = new WP_Query( array( 'post_type' => 'post', 'posts_per_page' => 3) ); ?>  
                             <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-                                <div class="col-md-4">
-                                    <div class="blog-box">
+                                <div class="col-lg-4 col-md-6 height">
+                                    <div class="blog-box height-fit">
                                         <div class="blog-photo">
                                             <a href="<?php echo get_permalink(); ?>">
                                                     <?php
@@ -323,7 +323,7 @@ get_header();
                                     $rp_query->the_post();
                                     ?>
 
-                                <div class="col-md-4">
+                                <div class="col-lg-4 col-md-6">
                                     <div class="blog-box">
                                         <div class="blog-photo">
                                             <a href="<?php echo get_permalink(); ?>">

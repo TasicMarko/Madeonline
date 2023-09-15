@@ -46,14 +46,14 @@ $container = get_theme_mod( 'understrap_container_type' );
     <div id="blog-listing">
         <div class="container">
             <div class="row">
-                <div class="col-md-10 offset-md-1">
+                <div class="col-lg-10 offset-lg-1 col-md-12">
                     <div id="blog-listing-in">
                         <div class="row">
 
 
                             <?php while ( have_posts() ) : the_post(); ?>
                                                     
-                                        <div class="col-md-4 height">
+                                        <div class="col-lg-4 col-md-6 height">
                                             <div class="author-blog-box height-fit">
                                                 <div class="blog-photo">
                                                     <a href="<?php echo get_permalink(); ?>">
